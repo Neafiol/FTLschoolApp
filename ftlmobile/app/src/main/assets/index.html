@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FTL-app</title>
+    <!--<link rel="shortcut icon" href="img/logo.png" type="image/png">-->
+
+
+    <link rel="stylesheet" href="css/jquery.mobile-1.0a2.min.css"/>
+    <link rel="stylesheet" href="css/themes/mytheme.css"/>
+    <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+
+
+
+    <script src="js/jquery-1.4.4.min.js"></script>
+    <script src="js/jquery.mobile-1.0a2.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+</head>
+
+
+<div data-role="page" id="main_page" data-theme="c">
+    <div data-role="header">
+        <h1 class="lbl" id="twi_acc">FTL app</h1><br>
+
+    </div>
+
+
+    <div data-role="content">
+        <form id="authform" class="ui-body ui-corner-all">
+            <fieldset>
+                <div data-role="fieldcontain">
+                    <label for="username">Enter your username:</label>
+                    <input type="text" value="" name="username" id="username"/>
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="password">Enter your password:</label>
+                    <input type="password" value="" name="password" id="password"/>
+                </div>
+            </fieldset>
+        </form>
+        <a data-role="button" name="authbtn" id="authbtn"> Войти</a>
+        <a data-role="button" href="#reg_page" data-transition="slide"> Зарегестрироваться</a>
+    </div>
+
+
+    <div data-role="footer">
+    </div>
+</div>
+
+<div data-role="page" id="reg_page" data-theme="c">
+    <div data-role="header">
+        <h1 >Регистрация</h1><br>
+
+        <a href="#main_page" data-icon="gear" class="ui-btn-right">Войти</a>
+    </div>
+    <div data-role="content">
+        <form method="post" id="reg_form">
+            <div data-role="fieldcontain">
+
+                <label class="lbl">Имя:</label>
+                <input type="text" name="name">
+
+                <label class="lbl">фамилия:</label>
+                <input type="text" name="surname">
+
+
+
+                <label class="lbl" class="select">Класс</label>
+
+                <select name="class_nom" >
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                </select>
+
+                <label class="lbl" class="select">Буква класса</label>
+
+                <select name="class_type">
+                    <option value="7">А</option>
+                    <option value="8">Б</option>
+                    <option value="9">В</option>
+                    <option value="10">Г</option>
+                </select>
+
+
+                <label class="lbl">E-mail:</label>
+                  <input type="email" name="email"  placeholder="Ваш email.."><br>
+                <label class="lbl">Телефон:</label>
+                  <input type="number" name="phone"  placeholder="Ваш номер телефона..">
+
+                <label class="lbl" >Придумайте логин:</label>
+                <input type="text" name="login"  placeholder="Логин" >
+
+                <label class="lbl" >Придумайте пароль:</label>
+                <input type="password" name="password"  placeholder="Пароль" >
+            </div>
+        </form>
+        <a data-role="button"  id="reg_btn"> Зарегестрироваться</a>
+        <a  href="#message_page" id="next_page_mes"></a>
+    </div>
+    <div data-role="footer">
+    </div>
+</div>
+
+
+<div data-role="page" id="message_page" data-theme="c">
+    <div data-role="header">
+
+        <div data-role="navbar" >
+            <ul>
+                <li><a href="#news_page">Новости</a></li>
+                <li><a href="#" class="ui-btn-active">Сообщения</a></li>
+                <li><a href="#olimps_page">Олимпиады</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <ul data-role="listview" id="messages">
+            <li>
+                <h3>Прогул уроков</h3>
+                <p>
+                    Ваш сын прогулял урок
+                </p>
+                <a href="acura.html"></a>
+            </li>
+
+            <li>
+                <h3>2 за алгебру</h3>
+                <p>
+                    Ваш сын получил 2 за ДЗ по алгебре
+                </p>
+                <a href="acura.html"></a>
+            </li>
+
+        </ul>
+    </div>
+    <div data-role="footer">
+        <p class="ui-title">Made by Volnov Petr</p>
+    </div>
+
+</div>
+
+<div data-role="page" id="news_page" data-theme="c">
+    <div data-role="header">
+
+        <div data-role="navbar" >
+            <ul>
+                <li><a href="#" class="ui-btn-active">Новости</a></li>
+                <li><a href="#message_page" >Сообщения</a></li>
+                <li><a href="#olimps_page">Олимпиады</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <ul data-role="listview" id="news">
+            <li>
+                <h3>Прогул уроков</h3>
+                <p>
+                    Ваш сын прогулял урок
+                </p>
+                <a href="acura.html"></a>
+            </li>
+
+        </ul>
+    </div>
+    <div data-role="footer">
+        <p class="ui-title">Made by Volnov Petr</p>
+    </div>
+</div>
+
+<div data-role="page" id="olimps_page" data-theme="c">
+    <div data-role="header">
+
+        <div data-role="navbar" >
+            <ul>
+                <li><a href="#news_page">Новости</a></li>
+                <li><a href="#message_page" >Сообщения</a></li>
+                <li><a href="#"  class="ui-btn-active">Олимпиады</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <ul data-role="listview" id="olimps">
+            <li>
+                <h3>Олимпиада Ломоносова</h3>
+                <p>
+                    Завтра стартует отборочный этап олимпиады <br>ломоносова по математике
+                </p>
+                <a href="acura.html"></a>
+            </li>
+
+        </ul>
+    </div>
+    <div data-role="footer">
+        <p class="ui-title">Made by Volnov Petr</p>
+    </div>
+</div>
+<script>
+
+    // jQuery(function(){
+    //     jQuery('#authbtn').click(function(){
+    //         alert('This is a general button!');
+    //     });
+    // });
+    // $(document).ready(function() {
+    //     jQuery('.ui-btn').click(function () {
+    //         alert('333');
+    //     });
+    // });
+</script>
+
+</body>
+</html>
